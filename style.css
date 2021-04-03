@@ -1,5 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
+}
+/* main div */
+#main{
+    border:1px solid black;
+    width:25%;
+    margin: 200px auto;
+    height:300px;
+    padding-top: 25px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.9);
+    color:white;
+    font-family: 'Exo', sans-serif;
+    line-height: 30px;
+}
+body{
+    background-image:url(images/main.jpg);
+}
+i{
+    color:red;
+}
+#head i{
+    font-size: 45px;
+
+}
+#head{
+    text-align: center;
+}
+#first{
+    position:absolute;
+    top:7px;
+}
+#second{
+    position: absolute;
+    top:7px;
+}
+input[type="text"],input[type="password"]{
+    background: transparent;
+    width:70%;
+    border:none;
+    border-bottom:2px solid yellow;
+    font-size: 1rem;
+    padding-left:20px;
+    color:white;
+}
+.input{
+    position: relative;
+}
+input[type="submit"]{
+    margin-top:20px ;
+    width:100px;
+    height:30px;
+    border-radius: 8px;
+    border:none;
+    background-color:red;
+    color:white;
+    font-size: larger;
+}
+input:focus{
+    outline:none;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    border-bottom: 2px solid red;
+    outline: none;
+}
+input[type="submit"]:hover{
+    background-color: green;
 }
