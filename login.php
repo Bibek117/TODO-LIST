@@ -1,3 +1,13 @@
+
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+    echo "<script>location.href='main.php'</script>";
+}else{
+    //the login page will be shown
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

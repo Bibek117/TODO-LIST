@@ -11,7 +11,7 @@ if(isset($_SESSION['username'])){
         echo "<script>location.href='main.php'</script>";
     }else{
        echo "<script>alert('Incorret username/password')</script>";  
-        echo "<script>location.href='login.html'</script>";
+        echo "<script>location.href='login.php'</script>";
     }
 }
 ?>
