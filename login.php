@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 if(isset($_SESSION['username'])){
@@ -8,6 +7,7 @@ if(isset($_SESSION['username'])){
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +22,8 @@ if(isset($_SESSION['username'])){
 <body>
     <div id="main">
        <div id="head">
-        <i class="fas fa-bars"></i>
-        <h1>TODO_LIST</h1>
+       <i class="fas fa-list-alt"></i>
+        <h1><span style="color:rgb(17,231,17)">TODO </span><span style="color:yellow">LIST</span></h1>
         <h3>LOG-IN</h3>
        </div>
         <form method="post"  action="main.php">
