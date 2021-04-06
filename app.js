@@ -3,6 +3,20 @@ const taskInput = document.querySelector('#input-task');
 const taskSubmit= document.querySelector('#submit');
 const taskContain = document.querySelector('#sub-container');
 
+ 
+//storing data to the local storage
+let localMem =()=>{
+    const allTask =document.querySelectorAll('.display');
+    var allTextarray = [];
+    allTask.forEach((value)=>{
+        return allTextarray.push(value.innerHTML);
+    })
+    //console.log(allTextarray);
+    localStorage.setItem("contents",JSON.stringify(allTextarray));
+    //localStorage.clear(); //clears all the data
+}
+
+
 //new task adding
 taskSubmit.addEventListener('click',()=>{
     var note = taskInput.value;
@@ -19,7 +33,7 @@ let newNote = (note)=>{
     let notes =document.createElement('div');
      notes.classList.add('task');
    const htmlData = `
-   <p>${note}</p>
+   <p class="display" >${note}</p>
    <div class="icondiva"><i class="fas fa-check"></i></div>
    <div class="icondivb"><i class="fas fa-trash"></i></div>`
    notes.insertAdjacentHTML('afterbegin',htmlData);
@@ -29,15 +43,29 @@ let newNote = (note)=>{
    const deleteTask =notes.querySelector('.icondivb');
    deleteTask.addEventListener('click',()=>{
        notes.remove();
+       localMem();
    })
    checkTask.addEventListener('click',()=>{
     notes.classList.add('checked');
     })  
-
+   localMem();
 }
+//get data from local storage on window reload
+document.addEventListener('DOMContentLoaded',()=>{
+    let extracted = JSON.parse(localStorage.getItem('contents'));
+    //console.log(extracted);
+    //call the new note add function using loop for every element inarray
+    if(extracted){
+        extracted.forEach((value)=>{
+            newNote(value);
+        })
+    }
+
+})
 
 
 
+//mannuly creating div
  // let para = document.createElement('p');
     // para.textContent = note;
     // notes.appendChild(para);

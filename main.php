@@ -39,15 +39,8 @@ if(isset($_SESSION['username'])){
           <p>Code until night Lorem ipsum, rg  amet dfdf</p>
           <div class="icondiva"><i class="fas fa-check"></i></div>
           <div class="icondivb"><i class="fas fa-trash"></i></div>
-
-        </div>
-        <div class="task">
-          <p>Code until night Lorem ipsum, rg  amet dfdf</p>
-          <div class="icondiva"><i class="fas fa-check"></i></div>
-          <div class="icondivb"><i class="fas fa-trash"></i></div>
-        </div>   -->
-        
-          
+          </div>-->
+              
    </div>
    <a href='logout.php'><input type='button' name='logout' value='logout'></a>
 </div>
