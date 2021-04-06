@@ -9,8 +9,7 @@ body{
 }
 #main-container{
     border: 2px solid red;
-    max-width:200px;
-    min-width: 400px;
+    width:40%;
     margin: 100px auto;
     height:550px;
     padding-top: 25px;

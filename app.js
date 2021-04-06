@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     let extracted = JSON.parse(localStorage.getItem('contents'));
     //console.log(extracted);
     //call the new note add function using loop for every element inarray
+    //if any data is there function is executed
     if(extracted){
         extracted.forEach((value)=>{
             newNote(value);
-        })
-    }
-
+         })
+        }
 })
 
 
