@@ -6,8 +6,9 @@
 }
 /* main div */
 #main{
-    border:1px solid red;
-    width:25%;
+     border:1px solid red; 
+    max-width: 400px;
+    min-width: 300px;
     margin: 200px auto;
     height:300px;
     padding-top: 25px;
@@ -18,7 +19,14 @@
     line-height: 30px;
 }
 body{
-    background-image:url(images/main.jpg);
+     background-image:url(../images/main.jpg); 
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     
+     
+     
 }
 i{
     color:red;

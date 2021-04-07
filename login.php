@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['username'])){
-    echo "<script>location.href='main.php'</script>";
+    echo "<script>location.href='main.php'</script>"; //using js
 }else{
     //the login page will be shown
 }
@@ -16,7 +16,7 @@ if(isset($_SESSION['username'])){
     <meta name="author" content="Bibek">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO_LIST</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/ba71ba095c.js"></script>
 </head>
 <body>

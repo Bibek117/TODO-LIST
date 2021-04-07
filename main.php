@@ -8,10 +8,10 @@ if(isset($_SESSION['username'])){
 }else{
     if(isset($_POST['submit']) && $_POST['username']==$username &&$_POST['password']==$password){
         $_SESSION['username'] = $_POST['username'];
-        echo "<script>location.href='main.php'</script>";
+        header("location:main.php");
     }else{
        echo "<script>alert('Incorret username/password')</script>";  
-        echo "<script>location.href='login.php'</script>";
+       echo "<script>location.href='login.php'</script>";
     }
 } 
 ?> 
@@ -21,8 +21,8 @@ if(isset($_SESSION['username'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO_LIST</title>
-    <link rel="stylesheet" href="app.css">
-    <script src="https://kit.fontawesome.com/ba71ba095c.js"></script></script>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://kit.fontawesome.com/ba71ba095c.js"></script></>
 </head>
 <body>
 <div id="main-container">
@@ -31,8 +31,12 @@ if(isset($_SESSION['username'])){
          <p>keep track of your task..</p>
     </div>
     <div id="task-start">
-         <input type="text" id="input-task"  placeholder="Add task..." autocomplete="off">
+         <input type="text" id="input-task"  placeholder="Add new task..." autocomplete="off">
          <button id="submit">ADD</button>
+   </div>
+   <div id="identifier">
+   <div id="accomplished"><p>Accomplished</p></div>
+   <div id="pending"><p>Pending</p></div>
    </div>
    <div id="sub-container">
          <!-- <div class="task">
@@ -44,6 +48,6 @@ if(isset($_SESSION['username'])){
    </div>
    <a href='logout.php'><input type='button' name='logout' value='logout'></a>
 </div>
-<script  src="app.js"></script>
+<script  src="js/app.js"></script>
 </body>
 </html>
